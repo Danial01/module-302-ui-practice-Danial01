@@ -9,6 +9,7 @@ import android.widget.TextView
 import java.util.*
 
 
+
 class MainActivity2: AppCompatActivity(), View.OnClickListener {
 
     private var EditTextName: EditText? = null

@@ -25,14 +25,14 @@ class MainActivity3: AppCompatActivity() {
 
     }
 
-    override fun onEditorAction(p0: TextView?, actionId: Int, p2: KeyEvent?): Boolean {
+/*    override fun onEditorAction(p0: TextView?, actionId: Int, p2: KeyEvent?): Boolean {
         return if (p0 == loginButton){
             val username = EditTextEmail?.text?.trim().toString()
             if (username.isEmpty() || (username.isBlank())) {
 
                 EditTextEmail?.error = getString(R.string.username_cannot_be_empty)
 
-
+*/
 
 
 
