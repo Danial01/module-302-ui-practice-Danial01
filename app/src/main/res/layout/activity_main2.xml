@@ -26,9 +26,11 @@
     <EditText
         android:id="@+id/EditTextName"
         android:layout_width="match_parent"
+        android:textColorHint="@color/white"
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="@string/NAME"
+        android:textColor="@color/white"
         android:maxLines="1"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="50dp"/>
@@ -39,15 +41,19 @@
         android:layout_height="wrap_content"
         android:inputType="text"
         android:hint="@string/email"
+        android:textColor="@color/white"
         android:maxLines="1"
+        android:textColorHint="@color/white"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="20dp"/>
 
     <EditText
         android:id="@+id/EditTextPassword"
         android:layout_width="match_parent"
+        android:textColor="@color/white"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:textColorHint="@color/white"
         android:hint="@string/password"
         android:maxLines="1"
         android:layout_marginHorizontal="35dp"

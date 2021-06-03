@@ -26,10 +26,29 @@ class MainActivity2: AppCompatActivity(), View.OnClickListener {
         EditTextPassword = findViewById(R.id.EditTextPassword)
         CreateAccountButton = findViewById(R.id.ButtonCreateAccount)
 
+        CreateAccountButton?.setOnClickListener {
+            val signUpIntent = Intent(this, MainActivity2::class.java)
+            startActivity(signUpIntent)
 
-    }
 
-    override fun onClick(v: View?) {
-        TODO("Not yet implemented")
+        }
+
+
+        val username = EditTextEmail?.text?.trim().toString()
+        if (username.isEmpty() || username.isBlank()) {
+            EditTextEmail?.error = "Email cannot be empty"
+
+
+
+            override fun onClick(v: View?) {
+                val username = EditTextEmail?.text?.trim().toString()
+                if (username.isEmpty() || username.isBlank()) {
+                    EditTextEmail?.error = "Email cannot be empty"
+                }
+            }
+        }
     }
 }
+
+
+

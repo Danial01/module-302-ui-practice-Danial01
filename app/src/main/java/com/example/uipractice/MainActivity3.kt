@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import java.util.*
 
 class MainActivity3: AppCompatActivity() {
@@ -23,16 +24,19 @@ class MainActivity3: AppCompatActivity() {
         EditTextPassword = findViewById(R.id.EditTextPassword)
         loginButton = findViewById(R.id.ButtonCreateAccount)
 
+        EditTextEmail?.setOnClickListener{
+            val signUpIntent = Intent(this, MainActivity2::class.java)
+            startActivity(signUpIntent)
+
     }
 
-/*    override fun onEditorAction(p0: TextView?, actionId: Int, p2: KeyEvent?): Boolean {
-        return if (p0 == loginButton){
-            val username = EditTextEmail?.text?.trim().toString()
-            if (username.isEmpty() || (username.isBlank())) {
-
-                EditTextEmail?.error = getString(R.string.username_cannot_be_empty)
-
-*/
+        val username = EditTextEmail?.text?.trim().toString()
+    if(username.isEmpty() || username.isBlank()) {
+        Toast.makeText(applicationContext, "Message : "+ "Please enter your email!", Toast.LENGTH_SHORT).show()
+    } else {
+        Toast.makeText(applicationContext, "Email cannot be empty", Toast.LENGTH_SHORT).show()
+    }
+}
 
 
 

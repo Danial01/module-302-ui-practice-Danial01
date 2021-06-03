@@ -8,9 +8,10 @@ import android.view.KeyEvent
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity(),View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
 
     private var buttonSignUp: Button? = null
@@ -32,6 +33,7 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
         textViewTime = findViewById(R.id.clock)
 
         setDateAndTime()
+
         buttonSignUp?.setOnClickListener{
             val signUpIntent = Intent(this, MainActivity2::class.java)
             startActivity(signUpIntent)
@@ -44,12 +46,16 @@ class MainActivity : AppCompatActivity(),View.OnClickListener {
     }
     private fun setDateAndTime(){
         val currentDate = Date()
-     //   val timeFormat = simpleDateFormat("hh")
+        val timeFormat = SimpleDateFormat("hh:mm a")
+        val timeToShow = timeFormat.format(currentDate)
+        Log.i("TAG","$timeToShow")
+        val dateFormat = SimpleDateFormat("dd:MM:yyyy")
+        val showDate = dateFormat.format(currentDate)
+        Log.i("TAG", "$showDate")
+
     }
 
-    override fun onClick(v: View?) {
-        Log.d("click", "Hello")
-    }
+
 
 
     }
