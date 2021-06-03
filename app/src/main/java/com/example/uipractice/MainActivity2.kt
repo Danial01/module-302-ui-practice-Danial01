@@ -10,7 +10,7 @@ import java.util.*
 
 
 
-class MainActivity2: AppCompatActivity(), View.OnClickListener {
+abstract class MainActivity2: AppCompatActivity(), View.OnClickListener {
 
     private var EditTextName: EditText? = null
     private var EditTextEmail: EditText? = null
@@ -40,7 +40,7 @@ class MainActivity2: AppCompatActivity(), View.OnClickListener {
 
 
 
-            override fun onClick(v: View?) {
+            fun onClick(v: View?) {
                 val username = EditTextEmail?.text?.trim().toString()
                 if (username.isEmpty() || username.isBlank()) {
                     EditTextEmail?.error = "Email cannot be empty"
